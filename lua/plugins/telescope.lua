@@ -29,5 +29,11 @@ return {
       -- load_extension, somewhere after setup function:
       require("telescope").load_extension("ui-select")
     end
+  },
+  {
+    "nvim-telescope/telescope-dap.nvim",
+    config = function()
+      require('telescope').load_extension('dap')
+    end
   }
 }
