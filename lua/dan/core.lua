@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>gg", vim.cmd.LazyGit)
+vim.keymap.set("n", "<leader>nt", function()
+  vim.cmd("tabnew")
+end)
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -13,7 +16,7 @@ vim.cmd("set rnu")
 vim.cmd("set number relativenumber")
 vim.cmd("set nu rnu")
 vim.api.nvim_set_option("clipboard","unnamed")
-vim.api.nvim_create_user_command("DiagnosticToggle", function()
+vim.api.nvim_create_user_command("DiagnosticsToggle", function()
 	local config = vim.diagnostic.config
 	local vt = config().virtual_text
 	config {
