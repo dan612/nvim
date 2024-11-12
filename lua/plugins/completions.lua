@@ -12,7 +12,7 @@ return {
       "saadparwaiz1/cmp_luasnip",
     },
     config = function()
-      require "dan.completion"
+      require "dan.completions"
     end
   }
 }
