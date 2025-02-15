@@ -8,6 +8,6 @@ return {
   },
   config = function()
     vim.keymap.set("n", "<C-n>", ':Neotree filesystem reveal left<CR>', {})
-    vim.keymap.set("n", "<C-e>", ':Neotree position=current<CR>', {})
+    vim.keymap.set("n", "<C-e>", ':Neotree filesystem reveal current<CR>', {})
   end
 }
