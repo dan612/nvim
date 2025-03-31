@@ -40,12 +40,15 @@ dap.configurations.php = {
     type = "php",
     request = "launch",
     port = 9003,
+    log = true,
     -- this is where your file is in the container
     pathMappings = {
       ["/var/www/html/web"] = "${workspaceFolder}"
     }
   }
 }
+vim.fn.sign_define('DapBreakpoint',{ text ='🟥', texthl ='', linehl ='', numhl =''})
+vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
 vim.keymap.set('n', '<leader>?', function() dap.continue() end)
 vim.keymap.set('n', '<leader>N', function() dap.step_over() end)
 vim.keymap.set('n', '<leader>n', function() dap.step_into() end)
