@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- SET NEOVIM THEME --
-vim.cmd.colorscheme('catppuccin')
+vim.cmd.colorscheme('kanagawa-dragon')
 
 -- XDEBUG --
 local dap = require('dap')

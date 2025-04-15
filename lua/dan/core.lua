@@ -7,9 +7,6 @@ end
 -- Custom keymaps
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>gg", vim.cmd.LazyGit)
-vim.keymap.set("n", "<leader>mv", function()
-  vim.cmd("Markview splitToggle")
-end)
 vim.keymap.set('n', '<leader><leader>r', function()
   vim.cmd("w")
   vim.cmd("source %")
@@ -67,4 +64,4 @@ vim.api.nvim_create_user_command("DiagnosticsToggle", function()
 		signs = not vt,
 	}
 end, { desc = "toggle diagnostic" })
-vim.keymap.set("n", "<leader>dt", "<cmd>DiagnosticsToggle<CR>")
+vim.keymap.set("n", "<leader>dtog", "<cmd>DiagnosticsToggle<CR>")
