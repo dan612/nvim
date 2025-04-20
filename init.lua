@@ -17,7 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- SET NEOVIM THEME --
-vim.cmd.colorscheme('kanagawa-dragon')
+vim.cmd "let g:everforest_background = 'hard'"
+vim.cmd.colorscheme('everforest')
 
 -- XDEBUG --
 local dap = require('dap')
