@@ -15,7 +15,6 @@ vim.keymap.set("n", "-", "<cmd>Oil<CR>")
 vim.keymap.set("n", "<CR>", "<cmd>w!<CR>")
 vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
 vim.keymap.set("n", "<leader>wq", "<cmd>wq!<CR>")
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
 
 -- Terminal in neovim --
 vim.api.nvim_create_autocmd('TermOpen', {

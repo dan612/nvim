@@ -4,6 +4,9 @@ return {
   opts = {
     picker = {},
     explorer = {},
+    indent = {},
+    animate = {},
+    lazygit = {},
   },
    keys = {
     -- Top Pickers & Explorer
