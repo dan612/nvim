@@ -7,6 +7,7 @@ return {
     indent = {},
     animate = {},
     lazygit = {},
+    scroll = {},
   },
    keys = {
     -- Top Pickers & Explorer
