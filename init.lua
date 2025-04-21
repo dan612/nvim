@@ -17,8 +17,9 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- SET NEOVIM THEME --
-vim.cmd "let g:everforest_background = 'hard'"
-vim.cmd.colorscheme('everforest')
+vim.o.termguicolors = true
+-- vim.cmd "let g:everforest_background = 'hard'"
+vim.cmd.colorscheme('nightfox')
 
 -- XDEBUG --
 local dap = require('dap')
@@ -74,14 +75,14 @@ end)
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
 if not configs.drupal then
-	configs.drupal = {
-		default_config = {
-    		cmd = {'drupal-lsp'},
-    		filetypes = { 'php'},
-			root_dir = function(fname)
-			  return lspconfig.util.root_pattern('composer.json', '.git')(fname)
-			end
-		};
-	}
-   end
-lspconfig.drupal.setup{autostart = true }
+  configs.drupal = {
+    default_config = {
+      cmd = {'drupal-lsp'},
+      filetypes = {'php', 'module', 'inc', 'theme'},
+      root_dir = function(fname)
+        return lspconfig.util.root_pattern('composer.json', '.git')(fname)
+      end
+    };
+  }
+end
+lspconfig.drupal.setup{ autostart = true }
