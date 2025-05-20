@@ -19,7 +19,7 @@ require("lazy").setup("plugins")
 -- SET NEOVIM THEME --
 vim.o.termguicolors = true
 -- vim.cmd "let g:everforest_background = 'hard'"
-vim.cmd.colorscheme('nightfox')
+vim.cmd.colorscheme('nordfox')
 
 -- XDEBUG --
 local dap = require('dap')
