@@ -33,10 +33,6 @@ vim.keymap.set("n", "<leader>tt", function()
   job_id = vim.bo.channel
 end)
 
-vim.keymap.set("n", "<leader>build", function()
-  vim.fn.chansend(job_id, { "ls -lah<CR>" })
-end)
-
 -- General config
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
@@ -45,12 +41,7 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set syntax=on")
 vim.cmd("set number")
 vim.cmd("set nu")
--- vim.cmd("set relativenumber")
--- vim.cmd("set rnu")
--- vim.cmd("set number relativenumber")
--- vim.cmd("set nu rnu")
--- vim.cmd("set guicursor=n-v-c-i:block")
--- vim.cmd("set guicursor=a:blinkon100")
+-- vim.cmd("set guicursor=n-v-c:block")
 vim.api.nvim_set_option("clipboard","unnamed")
 
 -- Command to turn off diagnostics, if crowding screen
