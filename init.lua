@@ -56,12 +56,12 @@ dap.configurations.php = {
     port = 9003,
     log = true,
     -- this is where your file is in the container
+    -- you need to be in this directory when starting neovim.
     pathMappings = {
       ["/var/www/html/web"] = "${workspaceFolder}"
     }
   }
 }
-
 vim.fn.sign_define('DapBreakpoint',{ text ='🟥', texthl ='', linehl ='', numhl =''})
 vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
 vim.keymap.set('n', '<leader>?', function() dap.continue() end)
