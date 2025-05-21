@@ -14,7 +14,7 @@ end)
 vim.keymap.set("n", "-", "<cmd>Oil<CR>")
 vim.keymap.set("n", "<CR>", "<cmd>w!<CR>")
 vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
-vim.keymap.set("n", "<leader>wq", "<cmd>wq!<CR>")
+vim.keymap.set("n", "<leader>sq", "<cmd>wq!<CR>")
 
 -- Terminal in neovim --
 vim.keymap.set('t', '<C-space>', "<C-\\><C-n><C-w>h",{silent = true})
