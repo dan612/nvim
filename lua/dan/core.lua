@@ -17,11 +17,13 @@ vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
 vim.keymap.set("n", "<leader>wq", "<cmd>wq!<CR>")
 
 -- Terminal in neovim --
+vim.keymap.set('t', '<C-space>', "<C-\\><C-n><C-w>h",{silent = true})
 vim.api.nvim_create_autocmd('TermOpen', {
   group = vim.api.nvim_create_augroup('open-terminal', { clear = true }),
   callback = function()
     vim.opt.number = false
     vim.opt.relativenumber = false
+    vim.api.nvim_input("i")
   end,
 })
 local job_id = 0
