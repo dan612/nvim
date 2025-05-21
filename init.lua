@@ -19,7 +19,8 @@ require("lazy").setup("plugins")
 -- SET NEOVIM THEME --
 vim.o.termguicolors = true
 -- vim.cmd "let g:everforest_background = 'hard'"
-vim.cmd.colorscheme('nordfox')
+vim.cmd.colorscheme('nightfox')
+vim.keymap.set("n", "<leader>ct", "<cmd>Telescope colorscheme<CR>")
 
 -- LSP --
 vim.o.winborder = 'rounded'

@@ -55,3 +55,4 @@ vim.api.nvim_create_user_command("DiagnosticsToggle", function()
 	}
 end, { desc = "toggle diagnostic" })
 vim.keymap.set("n", "<leader>dtog", "<cmd>DiagnosticsToggle<CR>")
+
