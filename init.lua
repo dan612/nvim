@@ -76,18 +76,3 @@ vim.keymap.set('n', '<leader>db', function()
   local widgets = require('dap.ui.widgets')
   widgets.centered_float(widgets.scopes)
 end)
-
--- local lspconfig = require 'lspconfig'
--- local configs = require 'lspconfig.configs'
--- if not configs.drupal then
---   configs.drupal = {
---     default_config = {
---       cmd = {'drupal-lsp'},
---       filetypes = {'php', 'module', 'inc', 'theme'},
---       root_dir = function(fname)
---         return lspconfig.util.root_pattern('composer.json', '.git')(fname)
---       end
---     };
---   }
--- end
--- lspconfig.drupal.setup{ autostart = true }
